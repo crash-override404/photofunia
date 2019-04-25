@@ -2,15 +2,11 @@ import sys
 import base64
 import requests
 import urllib
-from .exceptions import PhotofuniaException
 
 class Utils:
     """docstring for Utils"""
     def __init__(self):
         self._session = requests.Session()
-
-    def parseUrl(self, path):
-        return self.LINE_HOST_DOMAIN + path
 
     def urlEncode(self, url, path, params=[]):
         try:        # Works with python 2.x
